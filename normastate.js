@@ -55,7 +55,7 @@ orionRescue.normastate.prototype = {
     diAudios.di8 = game.add.audio(diAudios.load[8]);
     diAudios.di9 = game.add.audio(diAudios.load[9]);
 
-  
+
 
 
     game.add.tileSprite(0, 0, gameWidth, gameHeight, 'BG');
@@ -92,7 +92,7 @@ orionRescue.normastate.prototype = {
         diAudios.di1.play();
         diAudios.wasPlayed = true;
       }
-      
+
     } else if(conversation.index == 1) {
       normaMood.index = 3;
       if(diAudios.wasPlayed == false) {
@@ -247,6 +247,7 @@ orionRescue.normastate.prototype = {
 
 //Função que chama a proxima sentença da Norma. Essa função é chamada por todos os botões presentes no NormaState
 function convChange() {
+  currentAudio.stop();
   btn.kill();
   if(conversation.index == 2) {
     answer.kill();
