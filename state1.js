@@ -278,7 +278,7 @@ orionRescue.state1.prototype = {
       }
 
       // RockShower Call --------------------------------------------------------------------
-  
+
       if(game.time.now > rockTimer && !gameWin) {
         fallPttrns = [randRange(100, 300), randRange(400, 600), randRange(700, 900)]
         var pos = Math.floor(Math.random() * fallPttrns.length);
@@ -292,7 +292,7 @@ orionRescue.state1.prototype = {
           victorySound = true;
           normaVoice.victory.play();
         }
-        
+
 
         if(!rock.alive){
           controlShip = false; //Turn off spaceship controls
@@ -315,7 +315,7 @@ orionRescue.state1.prototype = {
           }, 2500);
           setTimeout(function() { //reset game
             resetGame();
-            game.state.start('mainmenu');
+            game.state.start('diary');
           }, 10500);
 
           var winText = game.add.text(game.world.centerX, game.world.centerY*0.8, 'Você conseguiu!!\nChegamos ao\nplaneta Terra');
@@ -422,7 +422,7 @@ function collisionHandler(starship, rock) {
 function spaceshipDamaged() {
   damageSound.play(); //Damage sound
   cuidadoCall(); //Sound effect
-  spaceship.animations.play('shipDamage', 120, false); //Spaceship damaged animation 
+  spaceship.animations.play('shipDamage', 120, false); //Spaceship damaged animation
   hearts.getTop().destroy(); //Lose one life
   heartLostAnimation(); //Call animation
   damagedAnimation(); //Call animation
