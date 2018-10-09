@@ -64,9 +64,12 @@ orionRescue.diary.prototype = {
     menuMusic.fadeOut(2000);
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.add.tileSprite(0, 0, gameWidth, gameHeight, 'diaryBG');
-    var outBtn = game.add.button(1085, 115, 'outBtn', function() {game.state.start('mainmenu');});
+    var outBtn = game.add.button(115, 115, 'outBtn', function() {game.state.start('mainmenu');});
     outBtn.anchor.setTo(0.5, 0.5);
     outBtn.scale.setTo(0.4);
+    var repBtn = game.add.button(1085, 115, 'repBtn', function() {game.state.start('state1');});
+    repBtn.anchor.setTo(0.5, 0.5);
+    repBtn.scale.setTo(0.4);
     currentPage = game.add.tileSprite(0, 0, gameWidth, gameHeight, diaryObj.imgs[diaryObj.page]);
     createPageBtns();
     writeParagraph();

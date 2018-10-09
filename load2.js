@@ -113,6 +113,7 @@ orionRescue.load.prototype = {
     game.load.image('diary7', 'assets/UI/diary/diary7.png');
     game.load.image('diary8', 'assets/UI/diary/diary8.png');
     game.load.image('outBtn', 'assets/UI/diary/diaryOutBtn.png');
+    game.load.image('repBtn', 'assets/UI/diary/diaryRepBtn.png');
 
   },
 
